@@ -18,7 +18,8 @@ hexo clean && hexo g
 goto Endif
 
 :Backup
-git checkout source && git add * && git commit -m %2% && git push origin source
+set message="Backup updated at %DATE%"
+git checkout source && git add * && git commit -m %message% && git push origin source
 goto Endif
 
 :Endif
