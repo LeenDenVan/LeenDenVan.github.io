@@ -255,6 +255,7 @@ function code_highlight_style () {
       'design': 'by hojun'
     }
     var ele_name = $('pre:eq(' + i + ')')[0].children[0].className
+    if($('pre:eq('+i+')').hasClass('mermaid'))return
     var lang = ele_name.substr(0, ele_name.indexOf(' ')).replace('language-', '')
     if (lang.toLowerCase() == 'hljs') var lang = 'text'
     if (lang.toLowerCase() == 'js') var lang = 'javascript'
