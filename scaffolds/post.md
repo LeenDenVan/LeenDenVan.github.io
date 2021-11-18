@@ -1,11 +1,11 @@
 ---
 title: {{ title }}
 date: {{ date }}
-author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
-authorLink: hojun.cn
-authorAbout: 一个好奇的人
-authorDesc: 一个好奇的人
+author: LeenDenVan
+avatar: https://avatars.githubusercontent.com/u/16818274?v=4
+authorLink: leendvansland.xyz
+authorAbout: 
+authorDesc: 
 categories: 技术
 comments: true
 tags: 
