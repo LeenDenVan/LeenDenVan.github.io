@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">code | LeenDenVan&#39;s Land</title>
+  <title itemprop="name">单例模式 - Singleton Pattern | LeenDenVan&#39;s Land</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -369,6 +369,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/86531238_p25.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/86531238_p25.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      单例模式 - Singleton Pattern</h1>
+      <p class="entry-census">
+        <span>
+          <a href="hojun.cn">
+            <img src="https://avatars.githubusercontent.com/u/16818274?v=4">
+          </a>
+        </span>
+        <span>
+          <a href="hojun.cn">LeenDenVan</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-11-11<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
@@ -376,29 +400,91 @@
         <div class="toc"></div>
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
-          <header class="entry-header">
-            <h1 class="entry-title">code</h1>
-            <p class="entry-census">hojun&nbsp;·&nbsp;2021-11-11&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
-
-            <hr>
-          </header>
-        
         <div class="entry-content">
-          <pre><code class="kotlin">package future
+          <h2 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h2><blockquote>
+<p><strong>单例模式</strong>是一种创建型设计模式， 让你能够保证一个类只有一个实例， 并提供一个访问该实例的全局节点。<br><strong>Singleton</strong> is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.</p>
+</blockquote>
+<h2 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h2><p><a href="https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5jbGFzcyBTaW5nbGV0b257XG4gIC1TaW5nbGV0b24gaW5zdGFuY2UkXG4gIC1TaW5nbGV0b24oKVxuICArZ2V0SW5zdGFuY2UoKSQgU2luZ2xldG9uXG59IiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5jbGFzcyBTaW5nbGV0b257XG4gIC1TaW5nbGV0b24gaW5zdGFuY2UkXG4gIC1TaW5nbGV0b24oKVxuICArZ2V0SW5zdGFuY2UoKSQgU2luZ2xldG9uXG59IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ"></a></p>
+<h2 id="代码例"><a href="#代码例" class="headerlink" title="代码例"></a>代码例</h2><h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><pre><code class="java">public class Singleton&#123;
+    private static final Singleton singleton = new Singleton();
 
-import java.util.concurrent.*
-import kotlin.coroutines.*
+    private Singleton() &#123;&#125;
 
-suspend fun &lt;T&gt; CompletableFuture&lt;T&gt;.await(): T =
-    suspendCoroutine&lt;T&gt; &#123; cont: Continuation&lt;T&gt; -&gt;
-        whenComplete &#123; result, exception -&gt;
-            if (exception == null) // the future has been completed normally
-                cont.resume(result)
-            else // the future has completed with an exception
-                cont.resumeWithException(exception)
-        &#125;
+    public static Singleton getSingleton() &#123;
+        return singleton;
     &#125;
+&#125;
 </code></pre>
+<h3 id="非线程安全懒汉式"><a href="#非线程安全懒汉式" class="headerlink" title="非线程安全懒汉式"></a>非线程安全懒汉式</h3><pre><code class="java">public class Singleton &#123;
+
+    private static Singleton singleton;
+
+    private Singleton() &#123;&#125;
+
+    public static Singleton getSingleton() &#123;
+        if (singleton == null) &#123;
+            singleton = new Singleton();
+        &#125;
+        return singleton;
+    &#125;
+
+&#125;
+</code></pre>
+<h3 id="低效的线程安全懒汉式"><a href="#低效的线程安全懒汉式" class="headerlink" title="低效的线程安全懒汉式"></a>低效的线程安全懒汉式</h3><pre><code class="java">public class Singleton &#123;
+
+    private static Singleton singleton;
+
+    private Singleton() &#123;&#125;
+
+    public static synchronized Singleton getSingleton() &#123;
+        if (singleton == null) &#123;
+            singleton = new Singleton();
+        &#125;
+        return singleton;
+    &#125;
+
+&#125;
+</code></pre>
+<h3 id="双重校验锁线程安全懒汉式"><a href="#双重校验锁线程安全懒汉式" class="headerlink" title="双重校验锁线程安全懒汉式"></a>双重校验锁线程安全懒汉式</h3><pre><code class="java">public class Singleton &#123;
+
+    private static Singleton singleton;
+
+    private Singleton() &#123;&#125;
+
+    public static Singleton getSingleton() &#123;
+        if (singleton == null) &#123;
+            synchronized (Singleton.class) &#123;
+                if (singleton == null) &#123;
+                    singleton = new Singleton();
+                &#125;
+            &#125;
+        &#125;
+        return singleton;
+    &#125;
+
+&#125;
+</code></pre>
+<h3 id="枚举式"><a href="#枚举式" class="headerlink" title="枚举式"></a>枚举式</h3><pre><code class="java">public enum Singleton &#123;
+    INSTANCE;
+&#125;
+</code></pre>
+<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><pre><code class="java">public class Singleton &#123;
+    private Singleton() &#123;&#125;
+    private static final class SingletonHolder &#123;
+        private SingletonHolder() &#123;&#125;
+        private static Singleton4 instance = new Singleton();
+
+    &#125;
+    public static Singleton getInstance() &#123;
+        return SingletonHolder.instance;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h3><ul>
+<li>系统只需要一个实例对象，如系统要求提供一个唯一的序列号生成器，或者需要考虑资源消耗太大而只允许创建一个对象。</li>
+<li>客户调用类的单个实例只允许使用一个公共访问点，除了该公共访问点，不能通过其他途径访问该实例。</li>
+<li>在一个系统中要求一个类只有一个实例时才应当使用单例模式。反过来，如果一个类可以有几个实例共存，就需要对单例模式进行改进，使之成为多例模式。</li>
+</ul>
 <script type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.7.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.7.0/dist/mindmap.min.css">
         </div>
         <!-- .entry-content -->
@@ -438,7 +524,7 @@ suspend fun &lt;T&gt; CompletableFuture&lt;T&gt;.await(): T =
               Previous Post</span>
               <div class="info">
                 <h3>
-                Decorator Pattern</h3>
+                装饰模式 - Decorator Pattern</h3>
                 <hr>
               </div>
             </a>
@@ -483,16 +569,16 @@ suspend fun &lt;T&gt; CompletableFuture&lt;T&gt;.await(): T =
 
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="hojun.cn" class="profile gravatar"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
+          <a href="hojun.cn" class="profile gravatar"><img src="https://avatars.githubusercontent.com/u/16818274?v=4" itemprop="image" alt="LeenDenVan" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="hojun.cn" itemprop="url" rel="author">hojun</a>
+            <a href="hojun.cn" itemprop="url" rel="author">LeenDenVan</a>
             </h3>
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+        <p><i class="iconfont icon-write"></i>LeenDenVan</p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->
@@ -582,10 +668,6 @@ suspend fun &lt;T&gt; CompletableFuture&lt;T&gt;.await(): T =
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
 <script type="text/javascript">
-  setTimeout(() => {
-    code_highlight_style()
-    console.log("TJ High Light")
-  }, 2500)
 /* <![CDATA[ */
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
   var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};

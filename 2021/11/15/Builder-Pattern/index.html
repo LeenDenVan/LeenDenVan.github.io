@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">categories | LeenDenVan&#39;s Land</title>
+  <title itemprop="name">生成器模式 - Builder Pattern | LeenDenVan&#39;s Land</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -365,392 +365,444 @@
   </div>
 </header>
 
-      <header class="site-header no-select gizle sabit" role="banner">
-  <div class="site-top">
-    <div class="site-branding">
-      <span class="site-title">
-        <span class="logolink moe-mashiro">
-          <a href="/">
-            <span class="sakurasono">LeenDenVan&#39;s</span>
-            <span class="shironeko">Land</span>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/87489218_p0_master1200.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/87489218_p0_master1200.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      生成器模式 - Builder Pattern</h1>
+      <p class="entry-census">
+        <span>
+          <a href="leendvansland.xyz">
+            <img src="https://avatars.githubusercontent.com/u/16818274?v=4">
           </a>
         </span>
-      </span>
-    </div>
-    <div class="searchbox search-form-submit">
-      <i class="iconfont js-toggle-search iconsearch icon-search">
-      </i>
-    </div>
-    <div id="show-nav" class="showNav mobile-fit">
-      <div class="line line1">
-      </div>
-      <div class="line line2">
-      </div>
-      <div class="line line3">
-      </div>
-    </div>
-    <div class="lower-cantiner">
-      <div class="lower">
-        <nav class="mobile-fit-control hide">
-          <ul id="menu-new" class="menu">
-            
-              <li>
-                <a href="/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
-                    首页
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/archives">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
-                    归档
-                  </span>
-                </a>
-                
-                  <ul class="sub-menu">
-                    
-                      <li>
-                        <a href="/categories/%E6%8A%80%E6%9C%AF/">
-                          <i class="fa fa-code" aria-hidden="true"></i>
-                          技术
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E7%94%9F%E6%B4%BB/">
-                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                          生活
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E8%B5%84%E6%BA%90/">
-                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
-                          资源
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E9%9A%8F%E6%83%B3/">
-                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                          随想
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E8%BD%AC%E8%BD%BD/">
-                          <i class="fa fa-book" aria-hidden="true"></i>
-                          转载
-                        </a>
-                      </li>
-                    
-                  </ul>
-                
-              </li>
-            
-              <li>
-                <a href="/tags/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-tag" aria-hidden="true"></i>
-                    标签
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/categories/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-bookmark" aria-hidden="true"></i>
-                    分类
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="javascript:;">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
-                    清单
-                  </span>
-                </a>
-                
-                  <ul class="sub-menu">
-                    
-                      <li>
-                        <a href="/tags/%E6%82%A6%E8%AF%BB/">
-                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
-                          书单
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/bangumi/">
-                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
-                          番组
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/music/">
-                          <i class="fa fa-headphones" aria-hidden="true"></i>
-                          歌单
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/tags/%E5%9B%BE%E9%9B%86/">
-                          <i class="fa fa-photo" aria-hidden="true"></i>
-                          图集
-                        </a>
-                      </li>
-                    
-                  </ul>
-                
-              </li>
-            
-              <li>
-                <a href="/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
-                    关于
-                  </span>
-                </a>
-                
-                  <ul class="sub-menu">
-                    
-                      <li>
-                        <a href="/about/">
-                          <i class="fa fa-meetup" aria-hidden="true"></i>
-                          我？
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/theme-sakura/">
-                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
-                          主题
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/lab/">
-                          <i class="fa fa-cogs" aria-hidden="true"></i>
-                          Lab
-                        </a>
-                      </li>
-                    
-                  </ul>
-                
-              </li>
-            
-          </ul>
-        </nav>
-      </div>
-    </div>
+        <span>
+          <a href="leendvansland.xyz">LeenDenVan</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-11-15<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-</header>
 
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h2><blockquote>
+<p><strong>生成器模式</strong>是一种创建型设计模式， 使你能够分步骤创建复杂对象。 该模式允许你使用相同的创建代码生成不同类型和形式的对象。<br><strong>Builder</strong> is a creational design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code.</p>
+</blockquote>
+<h2 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h2><h3 id="模式成员"><a href="#模式成员" class="headerlink" title="模式成员"></a>模式成员</h3><ol>
+<li><strong>生成器</strong>（Builder） 接口声明在所有类型生成器中通用的产品构造步骤。</li>
+<li><strong>具体生成器</strong> （Concrete Builders） 提供构造过程的不同实现。 具体生成器也可以构造不遵循通用接口的产品。</li>
+<li><strong>产品</strong> （Products） 是最终生成的对象。 由不同生成器构造的产品无需属于同一类层次结构或接口。</li>
+<li><strong>主管</strong> （Director） 类定义调用构造步骤的顺序， 这样你就可以创建和复用特定的产品配置。</li>
+<li><strong>客户端</strong> （Client） 必须将某个生成器对象与主管类关联。 </li>
+</ol>
+<h3 id="模式类图"><a href="#模式类图" class="headerlink" title="模式类图"></a>模式类图</h3><p><img src="https://refactoringguru.cn/images/patterns/diagrams/builder/structure-2x.png?id=dca1b1508e23c266cbed"></p>
+<h2 id="Code-Example"><a href="#Code-Example" class="headerlink" title="Code Example"></a>Code Example</h2><pre><code class="java">//BuilingBuilder.java
+public interface BuildingBuilder&lt;T extends Building&gt; &#123;
+    public BuildingBuilder setModel(String model);
+    public BuildingBuilder setName(String name);
+    public BuildingBuilder setTexture(String textureName);
+    public BuildingBuilder setRecipe(HashMap&lt;String, Integer&gt; recipe);
+    public BuildingBuilder addRecipe(String resource, int amount);
+    public T build();
+&#125;
 
-<main class="content">
+//Building.java
+public abstract class Building &#123;
+    protected String name;
+    protected String modelName;
+    protected String textureName;
+    protected HashMap&lt;String, Integer&gt; recipe;
+    protected String unlockedTech;
+    public abstract BuildingBuilder newBuilder();
+    public abstract String getDescription();
+&#125;
 
-    
+//PowerGenerator.java
+public class PowerGenerator extends Building &#123;
 
-<div id="category-cloud" class="container chip-container">
+    private double basePowerGeneration;
+    private boolean requireInputFuel = false;
+    private ArrayList&lt;String&gt; requiredFuel = new ArrayList();
+    private String fuelType = &quot;None&quot;;
 
-    <div class="card">
+    class PowerGeneratorBuilder implements BuildingBuilder&lt;PowerGenerator&gt;&#123;
+        private PowerGenerator powerGenerator;
 
-        <div class="card-content">
+        public PowerGeneratorBuilder(PowerGenerator powerGenerator)&#123;
+            this.powerGenerator = powerGenerator;
+        &#125;
 
-            <div class="tag-title center-align">
+        @Override
+        public PowerGeneratorBuilder setModel(String model) &#123;
+            this.powerGenerator.modelName = model;
+            return this;
+        &#125;
 
-                <i class="fa fa-bookmark"></i>&nbsp;&nbsp;文章分类
+        @Override
+        public PowerGeneratorBuilder setName(String name) &#123;
+            this.powerGenerator.name = name;
+            return this;
+        &#125;
 
-            </div>
+        @Override
+        public PowerGeneratorBuilder setTexture(String textureName) &#123;
+            this.powerGenerator.textureName = textureName;
+            return this;
+        &#125;
 
-            <div class="tag-chips">
+        @Override
+        public PowerGeneratorBuilder setRecipe(HashMap&lt;String, Integer&gt; recipe)&#123;
+            this.powerGenerator.recipe = recipe;
+            return this;
+        &#125;
 
-                
+        @Override
+        public PowerGeneratorBuilder addRecipe(String resource, int amount)&#123;
+            if(this.powerGenerator.recipe == null)&#123;
+                this.powerGenerator.recipe = new HashMap&lt;&gt;();
+            &#125;
+            this.powerGenerator.recipe.put(resource,amount);
+            return this;
+        &#125;
 
-                
+        public PowerGeneratorBuilder setRequiredFuel(String name)&#123;
+            this.powerGenerator.requiredFuel.add(name);
+            return this;
+        &#125;
 
-                
+        public PowerGeneratorBuilder isRequireInputFuel(boolean bool)&#123;
+            this.powerGenerator.requireInputFuel = bool;
+            return this;
+        &#125;
 
-                <a href="/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" title="软件设计: 5">
+        public PowerGeneratorBuilder setFuelType(String fuelType)&#123;
+            this.powerGenerator.fuelType = fuelType;
+            return this;
+        &#125;
 
-                    <span class="chip center-align waves-effect waves-light
+        public PowerGeneratorBuilder setBaseGeneration(double baseGeneration)&#123;
+            this.powerGenerator.basePowerGeneration = baseGeneration;
+            return this;
+        &#125;
 
-                             chip-default "
+        public PowerGeneratorBuilder setUnlockTech(String tech)&#123;
+            this.powerGenerator.unlockedTech = tech;
+            return this;
+        &#125;
 
-                            style="background-color: #F9EBEA;">软件设计
+        @Override
+        public PowerGenerator build() &#123;
+            return this.powerGenerator;
+        &#125;
+    &#125;
 
-                        <span class="tag-length">5</span>
+    @Override
+    public PowerGeneratorBuilder newBuilder()&#123;
+        return new PowerGeneratorBuilder(this);
+    &#125;
 
-                    </span>
+    @Override
+    public String getDescription() &#123;
+        String desc = this.name + &quot; model:&quot;+this.modelName+&quot; texture name:&quot;+this.textureName+&quot; Unlock under:&quot;+this.unlockedTech+&quot;\n&quot;;
+        for(Map.Entry&lt;String, Integer&gt; entry : this.recipe.entrySet())&#123;
+            desc += &quot;  |&quot;+entry.getKey()+&quot; &quot;+entry.getValue()+&quot; \n&quot;;
+        &#125;
+        desc += &quot;PowerGeneration:&quot; + this.basePowerGeneration+&quot;MJ, Fuel Type:&quot;+this.fuelType+&quot; &quot;;
+        if(!this.requireInputFuel &amp;&amp; !this.requiredFuel.isEmpty())
+            for(String s : this.requiredFuel)desc += s +&quot; &quot;;
+        return desc;
+    &#125;
 
-                </a>
+    @Override
+    public String toString()&#123;
+        return getDescription();
+    &#125;
 
-                
+&#125;
 
-                
+//Client.java
+public class Client &#123;
+    public PowerGenerator createWindTurbine()&#123;
+        return new PowerGenerator().newBuilder()
+                .setName(&quot;Wind Turbine&quot;)
+                .setModel(&quot;WTmodel.obj&quot;)
+                .setTexture(&quot;WT.png&quot;)
+                .setBaseGeneration(0.3)
+                .setUnlockTech(&quot;Electromagnetism&quot;)
+                .setFuelType(&quot;Wind&quot;)
+                .addRecipe(&quot;Iron Ignot&quot;, 6)
+                .addRecipe(&quot;Gear&quot;, 1)
+                .addRecipe(&quot;Magnetic Coil&quot;, 3)
+                .build();
+    &#125;
 
-                <a href="/categories/Java/" title="Java: 1">
+    public PowerGenerator createSolarPanel()&#123;
+        return new PowerGenerator().newBuilder()
+                .setName(&quot;Solar Panel&quot;)
+                .setModel(&quot;SP.obj&quot;)
+                .setTexture(&quot;SP.png&quot;)
+                .setBaseGeneration(0.36)
+                .setUnlockTech(&quot;Solar Collection&quot;)
+                .setFuelType(&quot;Solar Power&quot;)
+                .addRecipe(&quot;Copper Ignot&quot;, 10)
+                .addRecipe(&quot;High-Purity Silicon&quot;, 10)
+                .addRecipe(&quot;Circuit Board&quot;, 5)
+                .build();
+    &#125;
 
-                    <span class="chip center-align waves-effect waves-light
+    public PowerGenerator createThermalPowerPlant()&#123;
+        return new PowerGenerator().newBuilder()
+                .setName(&quot;Thermal Power Plant&quot;)
+                .setModel(&quot;TPP.obj&quot;)
+                .setTexture(&quot;TPP.png&quot;)
+                .setBaseGeneration(2.16)
+                .setFuelType(&quot;Thermal&quot;)
+                .setUnlockTech(&quot;Thermal Power&quot;)
+                .setRequiredFuel(&quot;Carbon nanotubes&quot;)
+                .setRequiredFuel(&quot;Hydrogen&quot;)
+                .setRequiredFuel(&quot;Deuterium&quot;)
+                .setRequiredFuel(&quot;Fire Ice&quot;)
+                .setRequiredFuel(&quot;Wood&quot;)
+                .setRequiredFuel(&quot;Refined Oil&quot;)
+                .setRequiredFuel(&quot;Diamond&quot;)
+                .setRequiredFuel(&quot;Graphit&quot;)
+                .setRequiredFuel(&quot;Graphene&quot;)
+                .addRecipe(&quot;Iron Ignot&quot;, 10)
+                .addRecipe(&quot;Stone Brick&quot;, 4)
+                .addRecipe(&quot;Gear&quot;, 4)
+                .addRecipe(&quot;Magnetic Coil&quot;, 4)
+                .isRequireInputFuel(true)
+                .build();
+    &#125;
 
-                             chip-default "
+    public PowerGenerator createMiniFusionPowerPlant()&#123;
+        return new PowerGenerator().newBuilder()
+                .setName(&quot;Mini Fusion Power Plant&quot;)
+                .setTexture(&quot;MFPP.png&quot;)
+                .setModel(&quot;MFPP.obj&quot;)
+                .isRequireInputFuel(true)
+                .setFuelType(&quot;Fusion&quot;)
+                .setUnlockTech(&quot;Mini Fusion Power Generation&quot;)
+                .setBaseGeneration(15)
+                .addRecipe(&quot;Titanium Alloy&quot;, 12)
+                .addRecipe(&quot;Super-Magnetic Ring&quot;, 10)
+                .addRecipe(&quot;Carbon Nanotube&quot;, 8)
+                .addRecipe(&quot;Processor&quot;, 4)
+                .isRequireInputFuel(true)
+                .setRequiredFuel(&quot;Deuteron Fuel Rod&quot;)
+                .build();
+    &#125;
 
-                            style="background-color: #F5EEF8;">Java
+    public PowerGenerator createRayReceiver()&#123;
+        return new PowerGenerator().newBuilder()
+                .setName(&quot;Ray Receiver&quot;)
+                .setTexture(&quot;RR.png&quot;)
+                .setModel(&quot;RR.obj&quot;)
+                .setFuelType(&quot;Dyson Cloud&quot;)
+                .setUnlockTech(&quot;Ray Receiver&quot;)
+                .setBaseGeneration(6.00)
+                .addRecipe(&quot;Steel&quot;, 20)
+                .addRecipe(&quot;High-Purity Silicon&quot;, 20)
+                .addRecipe(&quot;Photon Combiner&quot;, 10)
+                .addRecipe(&quot;Processor&quot;, 5)
+                .addRecipe(&quot;Super-Magnetic&quot;, 20)
+                .build();
+    &#125;
 
-                        <span class="tag-length">1</span>
+    public PowerGenerator createArtificialStar()&#123;
+        return new PowerGenerator().newBuilder()
+                .setName(&quot;Artificial Star&quot;)
+                .setModel(&quot;AS.obj&quot;)
+                .setTexture(&quot;AS.png&quot;)
+                .setFuelType(&quot;Antimatter&quot;)
+                .setUnlockTech(&quot;Artificial Star&quot;)
+                .isRequireInputFuel(true)
+                .addRecipe(&quot;Titanium Alloy&quot;, 20)
+                .addRecipe(&quot;Frame Material&quot;, 20)
+                .addRecipe(&quot;Annhilation Constraint Sphere&quot;, 10)
+                .addRecipe(&quot;Quantum Chip&quot;, 10)
+                .setBaseGeneration(72)
+                .setRequiredFuel(&quot;Antimatter Fuel Rod&quot;)
+                .build();
+    &#125;
 
-                    </span>
+&#125;
+//Main.java
+public class Main &#123;
 
-                </a>
-
-                
-
-                
-
-                <a href="/categories/%E6%8A%80%E6%9C%AF/" title="技术: 3">
-
-                    <span class="chip center-align waves-effect waves-light
-
-                             chip-default "
-
-                            style="background-color: #D5F5E3;">技术
-
-                        <span class="tag-length">3</span>
-
-                    </span>
-
-                </a>
-
-                
-
-                
-
-            </div>
-
+    public static void main(String[] args)&#123;
+        Client cln = new Client();
+        PowerGenerator wind = cln.createWindTurbine();
+        PowerGenerator ther = cln.createThermalPowerPlant();
+        PowerGenerator sol = cln.createSolarPanel();
+        PowerGenerator mfusion = cln.createMiniFusionPowerPlant();
+        PowerGenerator arti = cln.createArtificialStar();
+        PowerGenerator ray = cln.createRayReceiver();
+        println(wind);
+        println(ther);
+        println(sol);
+        println(mfusion);
+        println(arti);
+        println(ray);
+    &#125;
+    public static void println(Object obj)&#123;
+        System.out.println(obj);
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="Output">Wind Turbine model:WTmodel.obj texture name:WT.png Unlock under:Electromagnetism
+  |Iron Ignot 6 
+  |Gear 1 
+  |Magnetic Coil 3 
+PowerGeneration:0.3MJ, Fuel Type:Wind 
+Thermal Power Plant model:TPP.obj texture name:TPP.png Unlock under:Thermal Power
+  |Stone Brick 4 
+  |Iron Ignot 10 
+  |Gear 4 
+  |Magnetic Coil 4 
+PowerGeneration:2.16MJ, Fuel Type:Thermal 
+Solar Panel model:SP.obj texture name:SP.png Unlock under:Solar Collection
+  |Circuit Board 5 
+  |Copper Ignot 10 
+  |High-Purity Silicon 10 
+PowerGeneration:0.36MJ, Fuel Type:Solar Power 
+Mini Fusion Power Plant model:MFPP.obj texture name:MFPP.png Unlock under:Mini Fusion Power Generation
+  |Processor 4 
+  |Titanium Alloy 12 
+  |Carbon Nanotube 8 
+  |Super-Magnetic Ring 10 
+PowerGeneration:15.0MJ, Fuel Type:Fusion 
+Artificial Star model:AS.obj texture name:AS.png Unlock under:Artificial Star
+  |Annhilation Constraint Sphere 10 
+  |Frame Material 20 
+  |Quantum Chip 10 
+  |Titanium Alloy 20 
+PowerGeneration:72.0MJ, Fuel Type:Antimatter 
+Ray Receiver model:RR.obj texture name:RR.png Unlock under:Ray Receiver
+  |Processor 5 
+  |Super-Magnetic 20 
+  |High-Purity Silicon 20 
+  |Steel 20 
+  |Photon Combiner 10 
+PowerGeneration:6.0MJ, Fuel Type:Dyson Cloud 
+</code></pre>
+<script type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.7.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.7.0/dist/mindmap.min.css">
         </div>
-
-    </div>
-
-</div>
-
-    
-
-    <style type="text/css">
-
-    #category-radar {
-
-        margin-top: 50px;
-
-        width: 100%;
-
-        height: 360px;
-
-    }
-
-</style>
-
-<div class="container" data-aos="fade-up">
-
-    <div class="card">
-
-        <div id="category-radar" class="card-content"></div>
-
-    </div>
-
-</div>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/echarts.min.js"></script>
-
-<script type="text/javascript">
-
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
-    
-
-    let option = {
-
-        title: {
-
-            left: 'center',
-
-            text: '文章分类雷达图',
-
-            textStyle: {
-
-                fontWeight: 500,
-
-                fontSize: 22
-
-            }
-
-        },
-
-        tooltip: {},
-
-        radar: {
-
-            name: {
-
-                textStyle: {
-
-                    color: '#3C4858'
-
-                }
-
-            },
-
-            indicator: [{"name":"软件设计","max":6},{"name":"Java","max":6},{"name":"技术","max":6}],
-
-            nameGap: 5,
-
-            center: ['50%','55%'],
-
-            radius: '66%'
-
-        },
-
-        series: [{
-
-            type: 'radar',
-
-            color: ['#3ecf8e'],
-
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-
-            data : [
-
-                {
-
-                    value : [5,1,3],
-
-                    name : '文章分类数量'
-
-                }
-
-            ]
-
-        }]
-
-    };
-
-    radarChart.setOption(option);
-
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2021/11/16/Prototype-Pattern/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Prototype Pattern</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2021/11/15/Abstract-Factory-Pattern/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/82886110_p0_master1200.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/82886110_p0_master1200.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                抽象工厂模式 - Abstract Factory Pattern</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
 </script>
 
-    
 
-</main>
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="leendvansland.xyz" class="profile gravatar"><img src="https://avatars.githubusercontent.com/u/16818274?v=4" itemprop="image" alt="LeenDenVan" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="leendvansland.xyz" itemprop="url" rel="author">LeenDenVan</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

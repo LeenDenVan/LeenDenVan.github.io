@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Decorator Pattern | LeenDenVan&#39;s Land</title>
+  <title itemprop="name">装饰模式 - Decorator Pattern | LeenDenVan&#39;s Land</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -375,15 +375,15 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Decorator Pattern</h1>
+      装饰模式 - Decorator Pattern</h1>
       <p class="entry-census">
         <span>
-          <a href="hojun.cn">
-            <img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg">
+          <a href="leendvansland.xyz">
+            <img src="https://avatars.githubusercontent.com/u/16818274?v=4">
           </a>
         </span>
         <span>
-          <a href="hojun.cn">hojun</a>
+          <a href="leendvansland.xyz">LeenDenVan</a>
         </span>
         <span class="bull">
         ·</span>
@@ -401,37 +401,19 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <blockquote>
-<p>Related Book <em><strong>Head First Design Pattern</strong></em></p>
+          <h2 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h2><blockquote>
+<p>装饰模式动态地将责任附加到对象上。若要拓展功能，装饰提供了比继承更有弹性地替代方案<br><em><strong>The Decorator Pattern</strong></em> <em>attaches additional responsibilities to an object dynamically.</em><br> <em>Decorators provide a flexible alternative to subclassing for extending functinality</em></p>
 </blockquote>
-<h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><blockquote>
-<p><em><strong>The Decorator Pattern</strong></em> <em>attaches additional responsibilities to an object dynamically.</em><br><em>Decorators provide a flexible alternative to subclassing for extending functinality</em></p>
-</blockquote>
-<h2 id="Design-Principle-The-Open-Closed-Principle"><a href="#Design-Principle-The-Open-Closed-Principle" class="headerlink" title="Design Principle - The Open-Closed Principle"></a>Design Principle - <strong>The Open-Closed Principle</strong></h2><p>Classes should be open for extension, but closed for modification.</p>
-<h2 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h2><pre class="mermaid">    classDiagram
-    Component <|-- ConcreteComponent
-    Component <|-- Decorator
-    Component <-- Decorator
-    Decorator <|-- ConcreteDecoratorA
-    Decorator <|-- ConcreteDecoratorB
-    Component : methodA()*
-    Component : methodB()*
-    Component : //other methods
-    Decorator : -Component wrappedObj
-    Decorator : methodA()
-    Decorator : methodB()
-    ConcreteComponent : methodA()
-    ConcreteComponent : methodB()
-    ConcreteDecoratorA : methodA()
-    ConcreteDecoratorA : methodB()
-    ConcreteDecoratorA : newBehavior()
-    ConcreteDecoratorB : methodA()
-    ConcreteDecoratorB : methodB()
-    ConcreteDecoratorB : Object newState</pre>
-
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><pre><code class="java">//Beverage.java
+<h2 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h2><h3 id="模式构成"><a href="#模式构成" class="headerlink" title="模式构成"></a>模式构成</h3><ol>
+<li>部件 （Component） 声明封装器和被封装对象的公用接口。</li>
+<li>具体部件 （Concrete Component） 类是被封装对象所属的类。 它定义了基础行为， 但装饰类可以改变这些行为。</li>
+<li>基础装饰 （Base Decorator） 类拥有一个指向被封装对象的引用成员变量。 该变量的类型应当被声明为通用部件接口， 这样它就可以引用具体的部件和装饰。 装饰基类会将所有操作委派给被封装的对象。</li>
+<li>具体装饰类 （Concrete Decorators） 定义了可动态添加到部件的额外行为。 具体装饰类会重写装饰基类的方法， 并在调用父类方法之前或之后进行额外的行为。<h3 id="结构类图"><a href="#结构类图" class="headerlink" title="结构类图"></a>结构类图</h3><a href="https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5Db21wb25lbnQgPHwtLSBDb25jcmV0ZUNvbXBvbmVudFxuQ29tcG9uZW50IDwtLSBEZWNvcmF0b3JcbkNvbXBvbmVudCA8fC0tIERlY29yYXRvclxuRGVjb3JhdG9yIDx8LS0gQ29uY3JldGVEZWNvcmF0b3JBXG5EZWNvcmF0b3IgPHwtLSBDb25jcmV0ZURlY29yYXRvckJcbmNsYXNzIENvbXBvbmVudHtcbiAgPDxhYnN0cmFjdD4-XG4gIG1ldGhvZEEoKSpcbiAgbWV0aG9kQigpKlxufVxuY2xhc3MgRGVjb3JhdG9ye1xuICAtQ29tcG9uZW50IHdyYXBwZWRPYmplY3RcbiAgK21ldGhvZEEoKVxuICArbWV0aG9kQigpXG59XG5jbGFzcyBDb25jcmV0ZURlY29yYXRvckF7XG4gIG1ldGhvZEEoKVxuICBtZXRob2RCKClcbiAgbmV3TWV0aG9kKClcbn1cbmNsYXNzIENvbmNyZXRlRGVjb3JhdG9yQntcbiAgT2JqZWN0IG5ld1N0YXRlXG4gIG1ldGhvZEEoKVxuICBtZXRob2RCKClcbn1cbmNsYXNzIENvbmNyZXRlQ29tcG9uZW50e1xuICBtZXRob2RBKClcbiAgbWV0aG9kQigpXG59XG4iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ"><img src="https://mermaid.ink/img/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5Db21wb25lbnQgPHwtLSBDb25jcmV0ZUNvbXBvbmVudFxuQ29tcG9uZW50IDwtLSBEZWNvcmF0b3JcbkNvbXBvbmVudCA8fC0tIERlY29yYXRvclxuRGVjb3JhdG9yIDx8LS0gQ29uY3JldGVEZWNvcmF0b3JBXG5EZWNvcmF0b3IgPHwtLSBDb25jcmV0ZURlY29yYXRvckJcbmNsYXNzIENvbXBvbmVudHtcbiAgPDxhYnN0cmFjdD4-XG4gIG1ldGhvZEEoKSpcbiAgbWV0aG9kQigpKlxufVxuY2xhc3MgRGVjb3JhdG9ye1xuICAtQ29tcG9uZW50IHdyYXBwZWRPYmplY3RcbiAgK21ldGhvZEEoKVxuICArbWV0aG9kQigpXG59XG5jbGFzcyBDb25jcmV0ZURlY29yYXRvckF7XG4gIG1ldGhvZEEoKVxuICBtZXRob2RCKClcbiAgbmV3TWV0aG9kKClcbn1cbmNsYXNzIENvbmNyZXRlRGVjb3JhdG9yQntcbiAgT2JqZWN0IG5ld1N0YXRlXG4gIG1ldGhvZEEoKVxuICBtZXRob2RCKClcbn1cbmNsYXNzIENvbmNyZXRlQ29tcG9uZW50e1xuICBtZXRob2RBKClcbiAgbWV0aG9kQigpXG59XG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9"></a></li>
+</ol>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><a href="https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5CZXZlcmFnZSA8fC0tIEVzcHJlc3NvXG5CZXZlcmFnZSA8fC0tIENvbmRpbWVudERlY29yYXRvclxuQmV2ZXJhZ2UgPC0tIENvbmRpbWVudERlY29yYXRvclxuQ29uZGltZW50RGVjb3JhdG9yIDx8LS0gU295XG5Db25kaW1lbnREZWNvcmF0b3IgPHwtLSBTdGVhbWVkTWlsa1xuQ29uZGltZW50RGVjb3JhdG9yIDx8LS0gTW9jaGFcbmNsYXNzIEJldmVyYWdle1xuICA8PGFic3RyYWN0Pj5cbiAgI1N0cmluZyBkZXNjcmlwdGlvblxuICArZ2V0RGVzY3JpcHRpb24oKSBTdHJpbmdcbiAgK3RvU3RyaW5nKCkgU3RyaW5nXG4gICtjb3N0KCkqIGRvdWJsZVxufVxuY2xhc3MgRXNwcmVzc297XG4gICtjb3N0KCkgZG91YmxlXG59XG5jbGFzcyBDb25kaW1lbnREZWNvcmF0b3J7XG4gIDw8YWJzdHJhY3Q-PlxuICAjQmV2ZXJhZ2UgYmV2ZXJhZ2VcbiAgK2dldERlc2NyaXB0aW9uKCkqIFN0cmluZ1xufVxuY2xhc3MgU295e1xuICArZ2V0RGVzY3JpcHRpb24oKSBTdHJpbmdcbiAgK2Nvc3QoKSBkb3VibGVcbn1cbmNsYXNzIFN0ZWFtZWRNaWxre1xuICArZ2V0RGVzY3JpcHRpb24oKSBTdHJpbmdcbiAgK2Nvc3QoKSBkb3VibGVcbn1cbmNsYXNzIE1vY2hhe1xuICArZ2V0RGVzY3JpcHRpb24oKSBTdHJpbmdcbiAgK2Nvc3QoKSBkb3VibGVcbn0iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ"><img src="https://mermaid.ink/img/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5CZXZlcmFnZSA8fC0tIEVzcHJlc3NvXG5CZXZlcmFnZSA8fC0tIENvbmRpbWVudERlY29yYXRvclxuQmV2ZXJhZ2UgPC0tIENvbmRpbWVudERlY29yYXRvclxuQ29uZGltZW50RGVjb3JhdG9yIDx8LS0gU295XG5Db25kaW1lbnREZWNvcmF0b3IgPHwtLSBTdGVhbWVkTWlsa1xuQ29uZGltZW50RGVjb3JhdG9yIDx8LS0gTW9jaGFcbmNsYXNzIEJldmVyYWdle1xuICA8PGFic3RyYWN0Pj5cbiAgI1N0cmluZyBkZXNjcmlwdGlvblxuICArZ2V0RGVzY3JpcHRpb24oKSBTdHJpbmdcbiAgK3RvU3RyaW5nKCkgU3RyaW5nXG4gICtjb3N0KCkqIGRvdWJsZVxufVxuY2xhc3MgRXNwcmVzc297XG4gICtjb3N0KCkgZG91YmxlXG59XG5jbGFzcyBDb25kaW1lbnREZWNvcmF0b3J7XG4gIDw8YWJzdHJhY3Q-PlxuICAjQmV2ZXJhZ2UgYmV2ZXJhZ2VcbiAgK2dldERlc2NyaXB0aW9uKCkqIFN0cmluZ1xufVxuY2xhc3MgU295e1xuICArZ2V0RGVzY3JpcHRpb24oKSBTdHJpbmdcbiAgK2Nvc3QoKSBkb3VibGVcbn1cbmNsYXNzIFN0ZWFtZWRNaWxre1xuICArZ2V0RGVzY3JpcHRpb24oKSBTdHJpbmdcbiAgK2Nvc3QoKSBkb3VibGVcbn1cbmNsYXNzIE1vY2hhe1xuICArZ2V0RGVzY3JpcHRpb24oKSBTdHJpbmdcbiAgK2Nvc3QoKSBkb3VibGVcbn0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9"></a></p>
+<h3 id="Java-Version"><a href="#Java-Version" class="headerlink" title="Java Version"></a>Java Version</h3><pre><code class="java">//Beverage.java
 public abstract class Beverage &#123;
-    String description = &quot;Unknown Beverage&quot;;
+    protected String description = &quot;Unknown Beverage&quot;;
     public String getDescription()&#123; return description; &#125;
     @Override
     public String toString()&#123; return getDescription() + &quot; $&quot; + cost(); &#125;
@@ -439,6 +421,7 @@ public abstract class Beverage &#123;
 &#125;
 //CondimentDecorator.java
 public abstract class CondimentDecorator extends Beverage&#123;
+    Beverage beverage;
     public abstract String getDescription();
 &#125;
 //Espresso.java
@@ -450,7 +433,6 @@ public class Espresso extends Beverage&#123;
 &#125;
 //Soy.java
 public class Soy extends CondimentDecorator&#123;
-    Beverage beverage;
 
     public Soy(Beverage beverage)&#123; this.beverage = beverage; &#125;
 
@@ -462,7 +444,6 @@ public class Soy extends CondimentDecorator&#123;
 &#125;
 //SteamedMilk.java
 public class SteamedMilk extends CondimentDecorator&#123;
-    Beverage beverage;
 
     public SteamedMilk(Beverage beverage)&#123; this.beverage = beverage; &#125;
 
@@ -474,7 +455,6 @@ public class SteamedMilk extends CondimentDecorator&#123;
 &#125;
 //Mocha.java
 public class Mocha extends CondimentDecorator&#123;
-    Beverage beverage;
 
     public Mocha(Beverage beverage)&#123; this.beverage = beverage; &#125;
 
@@ -499,7 +479,7 @@ public class Main &#123;
 * Espresso, Mocha, Steamed Milk ,Soy $2.39
 */
 </code></pre>
-<pre><code class="kotlin">interface Beverage&#123;
+<h3 id="Kotlin-Version"><a href="#Kotlin-Version" class="headerlink" title="Kotlin Version"></a>Kotlin Version</h3><pre><code class="kotlin">interface Beverage&#123;
     var description: String
     fun cost():Double
 &#125;
@@ -535,6 +515,11 @@ fun main(args:Array&lt;String&gt;)&#123;
     println(Soy(SteamedMilk(mocha)))
 &#125;
 </code></pre>
+<h2 id="实际应用"><a href="#实际应用" class="headerlink" title="实际应用"></a>实际应用</h2><h3 id="Java-I-O"><a href="#Java-I-O" class="headerlink" title="Java I/O"></a>Java I/O</h3><p>   <a href="https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5JbnB1dFN0cmVhbSA8fC0tIEZpbGVJbnB1dFN0cmVhbVxuSW5wdXRTdHJlYW0gPHwtLSBTdHJpbmdCdWZmZXJJbnB1dFN0cmVhbVxuSW5wdXRTdHJlYW0gPHwtLSBCeXRlQXJyYXlJbnB1dFN0cmVhbVxuSW5wdXRTdHJlYW0gPHwtLSBGaWx0ZXJJbnB1dFN0cmVhbVxuSW5wdXRTdHJlYW0gPC0tIEZpbHRlcklucHV0U3RyZWFtXG5GaWx0ZXJJbnB1dFN0cmVhbSA8fC0tIFB1c2hCYWNrSW5wdXRTdHJlYW1cbkZpbHRlcklucHV0U3RyZWFtIDx8LS0gQnVmZmVyZWRJbnB1dFN0cmVhbVxuRmlsdGVySW5wdXRTdHJlYW0gPHwtLSBEYXRhSW5wdXRTdHJlYW1cbkZpbHRlcklucHV0U3RyZWFtIDx8LS0gSW5mbGF0b3JJbnB1dFN0cmVhbVxuSW5mbGF0b3JJbnB1dFN0cmVhbSA8fC0tIFppcElucHV0U3RyZWFtXG5jbGFzcyBGaWx0ZXJJbnB1dFN0cmVhbXtcbiAgPDxhYnN0cmFjdD4-XG59XG5jbGFzcyBJbnB1dFN0cmVhbXtcbiAgPDxhYnN0cmFjdD4-XG59XG4iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ"><img src="https://mermaid.ink/img/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5JbnB1dFN0cmVhbSA8fC0tIEZpbGVJbnB1dFN0cmVhbVxuSW5wdXRTdHJlYW0gPHwtLSBTdHJpbmdCdWZmZXJJbnB1dFN0cmVhbVxuSW5wdXRTdHJlYW0gPHwtLSBCeXRlQXJyYXlJbnB1dFN0cmVhbVxuSW5wdXRTdHJlYW0gPHwtLSBGaWx0ZXJJbnB1dFN0cmVhbVxuSW5wdXRTdHJlYW0gPC0tIEZpbHRlcklucHV0U3RyZWFtXG5GaWx0ZXJJbnB1dFN0cmVhbSA8fC0tIFB1c2hCYWNrSW5wdXRTdHJlYW1cbkZpbHRlcklucHV0U3RyZWFtIDx8LS0gQnVmZmVyZWRJbnB1dFN0cmVhbVxuRmlsdGVySW5wdXRTdHJlYW0gPHwtLSBEYXRhSW5wdXRTdHJlYW1cbkZpbHRlcklucHV0U3RyZWFtIDx8LS0gSW5mbGF0b3JJbnB1dFN0cmVhbVxuSW5mbGF0b3JJbnB1dFN0cmVhbSA8fC0tIFppcElucHV0U3RyZWFtXG5jbGFzcyBGaWx0ZXJJbnB1dFN0cmVhbXtcbiAgPDxhYnN0cmFjdD4-XG59XG5jbGFzcyBJbnB1dFN0cmVhbXtcbiAgPDxhYnN0cmFjdD4-XG59XG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9"></a></p>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul>
+<li>在无需修改代码的情况下即可使用对象， 且希望在运行时为对象新增额外的行为的时候。</li>
+<li>用继承来扩展对象行为的方案难以实现或者根本不可行， 可以使用该模式。</li>
+</ul>
 <script type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.7.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.7.0/dist/mindmap.min.css">
         </div>
         <!-- .entry-content -->
@@ -563,19 +548,36 @@ fun main(args:Array&lt;String&gt;)&#123;
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2021/11/14/Factory-Method-Pattern/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                工厂方法模式 - Factory Method Pattern</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
         
           
-            <div class="post-nepre full next">
+            <div class="post-nepre half next">
           
             <a href="/2021/11/11/Singleton-Pattern/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/86531238_p25.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/86531238_p25.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                code</h3>
+                单例模式 - Singleton Pattern</h3>
                 <hr>
               </div>
             </a>
@@ -602,11 +604,11 @@ fun main(args:Array&lt;String&gt;)&#123;
 
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="hojun.cn" class="profile gravatar"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
+          <a href="leendvansland.xyz" class="profile gravatar"><img src="https://avatars.githubusercontent.com/u/16818274?v=4" itemprop="image" alt="LeenDenVan" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="hojun.cn" itemprop="url" rel="author">hojun</a>
+            <a href="leendvansland.xyz" itemprop="url" rel="author">LeenDenVan</a>
             </h3>
           </div>
         </div>
@@ -701,10 +703,6 @@ fun main(args:Array&lt;String&gt;)&#123;
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
 <script type="text/javascript">
-  setTimeout(() => {
-    code_highlight_style()
-    console.log("TJ High Light")
-  }, 2500)
 /* <![CDATA[ */
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
   var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};

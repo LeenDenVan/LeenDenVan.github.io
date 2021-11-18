@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">categories | LeenDenVan&#39;s Land</title>
+  <title itemprop="name">抽象工厂模式 - Abstract Factory Pattern | LeenDenVan&#39;s Land</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -365,392 +365,408 @@
   </div>
 </header>
 
-      <header class="site-header no-select gizle sabit" role="banner">
-  <div class="site-top">
-    <div class="site-branding">
-      <span class="site-title">
-        <span class="logolink moe-mashiro">
-          <a href="/">
-            <span class="sakurasono">LeenDenVan&#39;s</span>
-            <span class="shironeko">Land</span>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/82886110_p0_master1200.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/82886110_p0_master1200.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      抽象工厂模式 - Abstract Factory Pattern</h1>
+      <p class="entry-census">
+        <span>
+          <a href="leendvansland.xyz">
+            <img src="https://avatars.githubusercontent.com/u/16818274?v=4">
           </a>
         </span>
-      </span>
-    </div>
-    <div class="searchbox search-form-submit">
-      <i class="iconfont js-toggle-search iconsearch icon-search">
-      </i>
-    </div>
-    <div id="show-nav" class="showNav mobile-fit">
-      <div class="line line1">
-      </div>
-      <div class="line line2">
-      </div>
-      <div class="line line3">
-      </div>
-    </div>
-    <div class="lower-cantiner">
-      <div class="lower">
-        <nav class="mobile-fit-control hide">
-          <ul id="menu-new" class="menu">
-            
-              <li>
-                <a href="/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
-                    首页
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/archives">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
-                    归档
-                  </span>
-                </a>
-                
-                  <ul class="sub-menu">
-                    
-                      <li>
-                        <a href="/categories/%E6%8A%80%E6%9C%AF/">
-                          <i class="fa fa-code" aria-hidden="true"></i>
-                          技术
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E7%94%9F%E6%B4%BB/">
-                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                          生活
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E8%B5%84%E6%BA%90/">
-                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
-                          资源
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E9%9A%8F%E6%83%B3/">
-                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                          随想
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E8%BD%AC%E8%BD%BD/">
-                          <i class="fa fa-book" aria-hidden="true"></i>
-                          转载
-                        </a>
-                      </li>
-                    
-                  </ul>
-                
-              </li>
-            
-              <li>
-                <a href="/tags/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-tag" aria-hidden="true"></i>
-                    标签
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/categories/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-bookmark" aria-hidden="true"></i>
-                    分类
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="javascript:;">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
-                    清单
-                  </span>
-                </a>
-                
-                  <ul class="sub-menu">
-                    
-                      <li>
-                        <a href="/tags/%E6%82%A6%E8%AF%BB/">
-                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
-                          书单
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/bangumi/">
-                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
-                          番组
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/music/">
-                          <i class="fa fa-headphones" aria-hidden="true"></i>
-                          歌单
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/tags/%E5%9B%BE%E9%9B%86/">
-                          <i class="fa fa-photo" aria-hidden="true"></i>
-                          图集
-                        </a>
-                      </li>
-                    
-                  </ul>
-                
-              </li>
-            
-              <li>
-                <a href="/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
-                    关于
-                  </span>
-                </a>
-                
-                  <ul class="sub-menu">
-                    
-                      <li>
-                        <a href="/about/">
-                          <i class="fa fa-meetup" aria-hidden="true"></i>
-                          我？
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/theme-sakura/">
-                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
-                          主题
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/lab/">
-                          <i class="fa fa-cogs" aria-hidden="true"></i>
-                          Lab
-                        </a>
-                      </li>
-                    
-                  </ul>
-                
-              </li>
-            
-          </ul>
-        </nav>
-      </div>
-    </div>
+        <span>
+          <a href="leendvansland.xyz">LeenDenVan</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-11-15<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-</header>
 
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h2><blockquote>
+<p>抽象工厂模式是一种创建型设计模式， 它能创建一系列相关的对象， 而无需指定其具体类。<br><strong>Abstract Factory</strong> is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.</p>
+</blockquote>
+<h2 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h2><h3 id="模式构成"><a href="#模式构成" class="headerlink" title="模式构成"></a>模式构成</h3><ol>
+<li><strong>抽象产品</strong> （Abstract Product） 为构成系列产品的一组不同但相关的产品声明接口。</li>
+<li><strong>具体产品</strong> （Concrete Product） 是抽象产品的多种不同类型实现。 所有变体 都必须实现相应的抽象产品 。</li>
+<li><strong>抽象工厂</strong> （Abstract Factory） 接口声明了一组创建各种抽象产品的方法。</li>
+<li><strong>具体工厂</strong> （Concrete Factory） 实现抽象工厂的构建方法。 每个具体工厂都对应特定产品变体， 且仅创建此种产品变体。<h3 id="模式类图"><a href="#模式类图" class="headerlink" title="模式类图"></a>模式类图</h3><img src="https://refactoringguru.cn/images/patterns/diagrams/abstract-factory/structure-2x.png"></li>
+</ol>
+<h2 id="Code-Example"><a href="#Code-Example" class="headerlink" title="Code Example"></a>Code Example</h2><pre><code class="java">//AssemblingMachine.java Abstract Factory
+public interface AssemblingMachine &#123;
+    public ConveyorBelt makeConveyorbelt();
+    public PowerTower makePowerTower();
+&#125;
+//AssemblingMachineMK1.java Concrete Factory 1
+public class AssemblingMachineMK1 implements AssemblingMachine &#123;
 
-<main class="content">
+    @Override
+    public ConveyorBelt makeConveyorbelt() &#123;
+        return new ConveyorBeltMK1();
+    &#125;
 
-    
+    @Override
+    public PowerTower makePowerTower() &#123;
+        return new TeslaTower();
+    &#125;
+&#125;
+//AssemblingMachineMK2.java Concrete Factory 2
+public class AssemblingMachineMK2 implements AssemblingMachine&#123;
+    @Override
+    public ConveyorBelt makeConveyorbelt() &#123;
+        return new ConveyorBeltMK2();
+    &#125;
+    @Override
+    public PowerTower makePowerTower() &#123;
+        return new WirelessPowerTower();
+    &#125;
+&#125;
+//AssemblingMachineMK3.java Concrete Factory 3
+public class AssemblingMachineMK3 implements AssemblingMachine &#123;
+    @Override
+    public ConveyorBelt makeConveyorbelt() &#123;
+        return new ConveyorBeltMK3();
+    &#125;
+    @Override
+    public PowerTower makePowerTower() &#123;
+        return new SatelliteSubstation();
+    &#125;
+&#125;
+//AssemblingMachineTire.java
+public enum AssembingMachineTire &#123;
+    MK1, MK2, MK3
+&#125;
+//AssemblingTerminal.java Client
+public class AssemblingTerminal &#123;
+    private AssemblingMachine assemblingMachine;
+    public AssemblingTerminal(AssembingMachineTire tire)&#123;
+        setAssemblingMachine(tire);
+    &#125;
+    public void setAssemblingMachine(AssembingMachineTire tire) &#123;
+        switch (tire)&#123;
+            case MK1: assemblingMachine = new AssemblingMachineMK1();break;
+            case MK2: assemblingMachine = new AssemblingMachineMK2();break;
+            case MK3: assemblingMachine = new AssemblingMachineMK3();break;
+        &#125;
+    &#125;
+    public ConveyorBelt makeConveyorBelt()&#123;
+        return assemblingMachine.makeConveyorbelt();
+    &#125;
+    public PowerTower makePowerTower()&#123;
+        return assemblingMachine.makePowerTower();
+    &#125;
+&#125;
+//ConveyorBelt.java ProductA
+public abstract class ConveyorBelt extends GameObject&#123;
+    public abstract int getSpeedPerMinute();
+    @Override
+    public String getDescription() &#123;
+        return super.getDescription() + &quot;\n Transport Speed:&quot; + getSpeedPerMinute() +&quot;items/minute&quot; ;
+    &#125;
+&#125;
+//ConveyorBeltMK1.java Concrete ProductA1
+public class ConveyorBeltMK1 extends ConveyorBelt &#123;
 
-<div id="category-cloud" class="container chip-container">
+    @Override
+    public int getSpeedPerMinute() &#123;
+        return 360;
+    &#125;
 
-    <div class="card">
+    @Override
+    public double getCraftingEnergy() &#123;
+        return 0.656;
+    &#125;
 
-        <div class="card-content">
+    @Override
+    public HashMap&lt;String, Double&gt; getRecipe() &#123;
+        HashMap&lt;String, Double&gt; recipe = new HashMap&lt;&gt;();
+        recipe.put(&quot;Iron Ignot&quot;, 2.0);
+        recipe.put(&quot;Gear&quot;, 1.0);
+        return recipe;
+    &#125;
+&#125;
+//ConveyorBeltMK2.java Concrete ProductA2
+public class ConveyorBeltMK2 extends ConveyorBelt&#123;
+    @Override
+    public int getSpeedPerMinute() &#123;
+        return 12*60;
+    &#125;
+    @Override
+    public double getCraftingEnergy() &#123;
+        return 3.90;
+    &#125;
+    @Override
+    public HashMap&lt;String, Double&gt; getRecipe() &#123;
+        HashMap&lt;String, Double&gt; recipe = new HashMap&lt;&gt;();
+        recipe.put(&quot;Conveyor Belt MK.I&quot;, 3.0);
+        recipe.put(&quot;Electromagnetic Turbine&quot;, 1.0);
+        return recipe;
+    &#125;
+&#125;
+//ConveyorBeltMK3.java Concrete ProductA3
+public class ConveyorBeltMK3 extends ConveyorBelt&#123;
+    @Override
+    public int getSpeedPerMinute() &#123;
+        return 30*60;
+    &#125;
 
-            <div class="tag-title center-align">
+    @Override
+    public double getCraftingEnergy() &#123;
+        return 12.9;
+    &#125;
 
-                <i class="fa fa-bookmark"></i>&nbsp;&nbsp;文章分类
+    @Override
+    public HashMap&lt;String, Double&gt; getRecipe() &#123;
+        HashMap&lt;String, Double&gt; recipe = new HashMap&lt;&gt;();
+        recipe.put(&quot;Conveyor Belt MK.II&quot;, 3.0);
+        recipe.put(&quot;Super-Magnetic Ring&quot;, 1.0);
+        recipe.put(&quot;Graphene&quot;, 1.0);
+        return recipe;
+    &#125;
+&#125;
+//GameObject.java
+public abstract class GameObject &#123;
+    public String getName()&#123;
+        return this.getClass().getSimpleName();
+    &#125;
+    public String getDescription()&#123;
+        String res = getName() + &quot; Crafting Energy:&quot; + getCraftingEnergy() + &quot;\n&quot;;
+        for(Map.Entry&lt;String, Double&gt; entry : getRecipe().entrySet())&#123;
+            res+=entry.getKey()+&quot;/&quot;+entry.getValue()+&quot;+&quot;;
+        &#125;
+        return res;
+    &#125;
+    @Override
+    public String toString()&#123;
+        return getDescription();
+    &#125;
 
-            </div>
+    public abstract double getCraftingEnergy();
+    public abstract HashMap&lt;String, Double&gt; getRecipe();
+&#125;
+//PowerTower.java ProductB
+public abstract class PowerTower extends GameObject&#123;
+    public abstract int getRadius();
+    @Override
+    public String getDescription()&#123;
+        return super.getDescription() + &quot; \nRadius&quot; + getRadius();
+    &#125;
+&#125;
+//SatelliteSubstation.java Concrete ProductB1
+public class SatelliteSubstation extends PowerTower &#123;
+    @Override
+    public int getRadius() &#123;
+        return 100;
+    &#125;
 
-            <div class="tag-chips">
+    @Override
+    public double getCraftingEnergy() &#123;
+        return 347.0;
+    &#125;
 
-                
+    @Override
+    public HashMap&lt;String, Double&gt; getRecipe() &#123;
+        HashMap&lt;String, Double&gt; recipe = new HashMap&lt;&gt;();
+        recipe.put(&quot;Wireless Power Tower&quot;, 1.0);
+        recipe.put(&quot;Super-Magnetic Ring&quot;, 10.0);
+        recipe.put(&quot;Frame Material&quot;, 2.0);
+        return recipe;
+    &#125;
+&#125;
+//TeslaTower.java Concrete ProductB2
+public class TeslaTower extends PowerTower&#123;
 
-                
+    @Override
+    public int getRadius() &#123;
+        return 30;
+    &#125;
 
-                
+    @Override
+    public double getCraftingEnergy() &#123;
+        return 2.14;
+    &#125;
 
-                <a href="/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" title="软件设计: 5">
+    @Override
+    public HashMap&lt;String, Double&gt; getRecipe() &#123;
+        HashMap&lt;String, Double&gt; recipe = new HashMap&lt;&gt;();
+        recipe.put(&quot;Iron Ignot&quot;, 1.0);
+        recipe.put(&quot;Magnetic Coil&quot;, 3.0);
+        return recipe;
+    &#125;
+&#125;
+//WirelessPowerTower.java Concrete ProductB3
+public class WirelessPowerTower extends PowerTower&#123;
 
-                    <span class="chip center-align waves-effect waves-light
+    @Override
+    public int getRadius() &#123;
+        return 10;
+    &#125;
 
-                             chip-default "
+    @Override
+    public double getCraftingEnergy() &#123;
+        return 26.4;
+    &#125;
 
-                            style="background-color: #F9EBEA;">软件设计
+    @Override
+    public HashMap&lt;String, Double&gt; getRecipe() &#123;
+        HashMap&lt;String, Double&gt; recipe = new HashMap&lt;&gt;();
+        recipe.put(&quot;Tesla Tower&quot;, 1.0);
+        recipe.put(&quot;Plasma Exciter&quot;, 3.0);
+        return recipe;
+    &#125;
+&#125;
+//Main.java Test
+public class Main &#123;
 
-                        <span class="tag-length">5</span>
-
-                    </span>
-
-                </a>
-
-                
-
-                
-
-                <a href="/categories/Java/" title="Java: 1">
-
-                    <span class="chip center-align waves-effect waves-light
-
-                             chip-default "
-
-                            style="background-color: #F5EEF8;">Java
-
-                        <span class="tag-length">1</span>
-
-                    </span>
-
-                </a>
-
-                
-
-                
-
-                <a href="/categories/%E6%8A%80%E6%9C%AF/" title="技术: 3">
-
-                    <span class="chip center-align waves-effect waves-light
-
-                             chip-default "
-
-                            style="background-color: #D5F5E3;">技术
-
-                        <span class="tag-length">3</span>
-
-                    </span>
-
-                </a>
-
-                
-
-                
-
-            </div>
-
+    public static void main(String[] args)&#123;
+        AssemblingTerminal assemblingTerminal = new AssemblingTerminal(AssembingMachineTire.MK2);
+        ConveyorBelt conveyorBelt = assemblingTerminal.makeConveyorBelt();
+        println(conveyorBelt);
+        PowerTower powerTower = assemblingTerminal.makePowerTower();
+        println(powerTower);
+        assemblingTerminal.setAssemblingMachine(AssembingMachineTire.MK3);
+        ConveyorBelt conveyorBelt1 = assemblingTerminal.makeConveyorBelt();
+        PowerTower powerTower1 = assemblingTerminal.makePowerTower();
+        println(conveyorBelt1);
+        println(powerTower1);
+    &#125;
+    public static void println(Object obj)&#123;
+        System.out.println(obj);
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="Output">ConveyorBeltMK2 Crafting Energy:3.9
+Electromagnetic Turbine/1.0+Conveyor Belt MK.I/3.0+
+ Transport Speed:720items/minute
+WirelessPowerTower Crafting Energy:26.4
+Plasma Exciter/3.0+Tesla Tower/1.0+ 
+Radius10
+ConveyorBeltMK3 Crafting Energy:12.9
+Conveyor Belt MK.II/3.0+Graphene/1.0+Super-Magnetic Ring/1.0+
+ Transport Speed:1800items/minute
+SatelliteSubstation Crafting Energy:347.0
+Wireless Power Tower/1.0+Frame Material/2.0+Super-Magnetic Ring/10.0+ 
+Radius100
+</code></pre>
+<script type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.7.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.7.0/dist/mindmap.min.css">
         </div>
-
-    </div>
-
-</div>
-
-    
-
-    <style type="text/css">
-
-    #category-radar {
-
-        margin-top: 50px;
-
-        width: 100%;
-
-        height: 360px;
-
-    }
-
-</style>
-
-<div class="container" data-aos="fade-up">
-
-    <div class="card">
-
-        <div id="category-radar" class="card-content"></div>
-
-    </div>
-
-</div>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/echarts.min.js"></script>
-
-<script type="text/javascript">
-
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
-    
-
-    let option = {
-
-        title: {
-
-            left: 'center',
-
-            text: '文章分类雷达图',
-
-            textStyle: {
-
-                fontWeight: 500,
-
-                fontSize: 22
-
-            }
-
-        },
-
-        tooltip: {},
-
-        radar: {
-
-            name: {
-
-                textStyle: {
-
-                    color: '#3C4858'
-
-                }
-
-            },
-
-            indicator: [{"name":"软件设计","max":6},{"name":"Java","max":6},{"name":"技术","max":6}],
-
-            nameGap: 5,
-
-            center: ['50%','55%'],
-
-            radius: '66%'
-
-        },
-
-        series: [{
-
-            type: 'radar',
-
-            color: ['#3ecf8e'],
-
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-
-            data : [
-
-                {
-
-                    value : [5,1,3],
-
-                    name : '文章分类数量'
-
-                }
-
-            ]
-
-        }]
-
-    };
-
-    radarChart.setOption(option);
-
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2021/11/15/Builder-Pattern/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/87489218_p0_master1200.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://leendvanspics.oss-cn-beijing.aliyuncs.com/pic/87489218_p0_master1200.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                生成器模式 - Builder Pattern</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2021/11/15/Design-Principle/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Design Principle</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
 </script>
 
-    
 
-</main>
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="leendvansland.xyz" class="profile gravatar"><img src="https://avatars.githubusercontent.com/u/16818274?v=4" itemprop="image" alt="LeenDenVan" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="leendvansland.xyz" itemprop="url" rel="author">LeenDenVan</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
